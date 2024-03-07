@@ -18,6 +18,8 @@ plot(flowers, bees)
 
 plot(flowers, bees, pch=19)
 
+#blahblahblah
+
 #symbol dimensions
 plot(flowers, bees, pch=19, cex=2)
 plot(flowers, bees, pch=19, cex=.5)
