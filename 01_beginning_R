@@ -7,6 +7,7 @@ b <- 5 * 8
 a + b
 
 # Arrays
+# always put arrays in round brackets
 
 flowers <- c(3,6,8,10,15,18)
 flowers
