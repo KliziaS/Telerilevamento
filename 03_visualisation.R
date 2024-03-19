@@ -98,8 +98,54 @@ plot(stacksent [[4]], col=clcyan)
 dev.off()
 plot(stacksent [[4]], col=clcyan)
 
+# RGB plotting
+
+# stacksent [[1]] = b2 = blue
+# stacksent [[2]] = b3 = green
+# stacksent [[3]] = b4 = red
+# stacksent [[4]] = b8 = nir
+
+# im.plotRGB()
+im.plotRGB(stacksent, r=3, g=2, b=1)
+# or
+im.plotRGB(stacksent, 3, 2, 1)
+
+im.plotRGB(stacksent, r=4, g=2, b=1)
+im.plotRGB(stacksent, 4, 2, 1)
 
 
+# Exercise: make a plot with the natural colour and the false colour images one beside the other
+par (mfrow=c(1,2))
+im.plotRGB(stacksent, 3, 2, 1)
+im.plotRGB(stacksent, 4, 2, 1)
 
+dev.off()
+im.plotRGB(stacksent, 4, 3, 2)
+
+par(mfrow=c(1,3))
+im.plotRGB(stacksent, 3, 2, 1)
+im.plotRGB(stacksent, 4, 2, 1)
+# nir on red
+im.plotRGB(stacksent, 4, 3, 2)
+
+
+# nir on green
+im.plotRGB(stacksent, 3, 4, 2)
+
+# nir on blue
+im.plotRGB(stacksent, 3, 2, 4)
+
+
+# Final multiframe
+# Exercise: put the four images altogether
+par(mfrow=c(2,2))
+im.plotRGB(stacksent, 3, 2, 1) # natural color
+im.plotRGB(stacksent, 4, 2, 1) # nir on red
+im.plotRGB(stacksent, 3, 4, 2) # nir on green
+im.plotRGB(stacksent, 3, 2, 4) # nir on blue
+
+# Correlation of information
+pairs (stacksent)
+b2
 
 
