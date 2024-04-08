@@ -34,7 +34,7 @@ im.plotRGB(m1992, 2, 3, 1)
 im.import("matogrosso_ast_2006209_lrg.jpg")
 m2006 <- im.import("matogrosso_ast_2006209_lrg.jpg")
 
-# 
+# multiframe
 par(mfrow=c(1,2))
 im.plotRGB(m1992, r=1, g=2, b=3)
 im.plotRGB(m2006, r=1, g=2, b=3)
@@ -47,7 +47,7 @@ im.plotRGB(m2006, 2, 1, 3)
 # nir ontop of blue
 im.plotRGB(m2006, 2, 3, 1)
 
-# megapar
+# multiframe as megapar
 par(mfrow=c(2,3))
 im.plotRGB(m1992, 1, 2, 3) # 1992 nir on red
 im.plotRGB(m1992, 2, 1, 3) # 1992 nir on green
