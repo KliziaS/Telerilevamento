@@ -3,59 +3,59 @@
 library(imageRy)
 library(terra)
 
-vedo su imageRy e faccio una lista x prendere dati utili
+# vedo su imageRy e faccio una lista x prendere dati utili
 im.list()
-sono dati gia elaborati
-li chiamo
- importing data
-li riporto con la soita funzione. metto il primo e l-ultimo
+# sono dati gia elaborati
+# li chiamo
+# importing data
+# li riporto con la soita funzione. metto il primo e l-ultimo
 im.import("EN_01.png")
 im.import("EN_13.png")
 
 EN01 <-im.import("EN_01.png")
 EN13 <-im.import("EN_13.png")
 
-le metto una accanto all altra
-faccio un par
+# le metto una accanto all altra
+# faccio un par
 par(mfrow=c(1,2))
 im.plotRGB.auto(EN01)
 im.plotRGB.auto(EN13)
 
-li metto una sopra l-altro
+# li metto una sopra l-altro
 par(mfrow=c(2,1))
 im.plotRGB.auto(EN01)
 im.plotRGB.auto(EN13)
 
-il bianco nei test di labroatorio e' la base
-ho riportato l-img rgb con tutte e tre le bande
+# il bianco nei test di labroatorio e' la base
+# ho riportato l-img rgb con tutte e tre le bande
 se ho 3 livelli per entrambe le immagini posso fare le differenze tra le bande, l-importane [ che sia sempre la stessa banda
 
 
 # using the first element (band) of images
-differenza
+# differenza
 difEN = EN01[[1]] - EN13[[1]]
 cl <- colorRampPalette(c("red", "white", "blue")) (100)
-ma cambio, metto il blu come minimo e plotto la differenz tra le due img utilizz questa color palette
+# ma cambio, metto il blu come minimo e plotto la differenz tra le due img utilizz questa color palette
 # palette
 cl <- colorRampPalette(c("blue", "white", "red")) (100)
 plot(difEN, col=cl)
 
-plotto
+# plotto
 difEN = EN01[[1]] - EN13[[1]]
 cl <- colorRampPalette(c("blue", "white", "red")) (100)
 plot(difEN, col=cl)
 
-con dev off uccido il grafico precedente
-in tutte le parti rosse c e stato cambiamento piu alto
-con questo sistema posso quantificare 
-con i valori aprtivo da img a 8bit, range da 0 a 255
-diff 1-255 ho 2alla2 no 256 valori
- e' una quantificazione 
+# con dev off uccido il grafico precedente
+# in tutte le parti rosse c e stato cambiamento piu alto
+# con questo sistema posso quantificare 
+# con i valori aprtivo da img a 8bit, range da 0 a 255
+# diff 1-255 ho 2alla2 no 256 valori
+# e' una quantificazione 
 
-posso farlo sugli altri cambio commit arriva mail
+# posso farlo sugli altri cambio commit arriva mail
 
 
-Ice melt in Greenland
+# Ice melt in Greenland
 lavoro con un proxy
 nella scienza modellistica il proxy e una variabile misurabile
 il programma Copernicus nelle 4 macroaree di studio in energy Budget c-e ildataset EuroLST
