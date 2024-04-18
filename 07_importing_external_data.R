@@ -95,4 +95,23 @@ SWE
 
 ora mi registro al sito di copernicus e ragiono con qualche img
 
+#install packages
+install.packages("ncdf4") #needed to read Copernicus
+install.packages("RNetCDF") # needed to read Copernicus .nc data
+la funzione: open.nc
+
+# importing copernicus data
+soil <- rast ("c_gls_SSM1km_202404160000_CEURO_S1CSAR_V1.2.1.nc")
+plot(soil)
+plot soil ([[1]])
+
+se non mi serve tutta l'imagine allora posso fare un crop ossia un ritaglio
+scelgo il punto, guardo l'estensione in termini di longitudine e latitudine
+
+# cropping data
+ext <- c(25, 35, 58, 62)
+soilcrop <- crop (soil, ext)
+plot(soilcrop)
+plot(soilcrop[[1]])
+# fai gli screen
 
