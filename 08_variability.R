@@ -125,7 +125,7 @@ ad un nuovo asse che invece possiede un range molto piu ampio 90% e 10%
                   invece di scegliere il nir scelgo la componente
                   prendo un sacco di dati multivaraib e li compatto in queso
                   metodo: analisi dei componentit principali (PC)
-
+lb
 
 
 
